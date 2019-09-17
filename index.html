@@ -35,15 +35,69 @@
     
     <div class="">
         <div class="backgroundImage">
-            <p>llllll</p>
+
             <!-- display the image here for users to see -->
+
+            <form action="" method="get" mt-5>
+                <div class="form-group col-md-5">
+                    <label for="inputPassword4">Make</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-5">
+                    <label for="inputPassword4">model</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+            
+                <div class="form-group form-row col-md-5">
+                    <div class="col">
+                        <select id="inputState" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select id="inputState" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row form-group col-md-5">
+                    <div class="col">
+                        <select id="inputState" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select id="inputState" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group col-md-5">
+                    <input type="submit" value="search" class="btn btn-primary">
+                </div>
+               
+                
+              
+               
+            </form>
         </div>
     </div>
 
 
 
     <div class="container mt-5">
-        <h2 class="text-center primary"> Featured </h2>
+        <h2 class="text-center text-primary mb-5"> Featured </h2>
         <div class="row">
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="card">
@@ -166,23 +220,81 @@
         </div>
     </div>
 
+    <div class="mt-5 " id="whyteTestimony" >
+        <h2 class="text-center text-primary">
+            Testimonies
+        </h2>
+        <div class="row m-3">
+            
+            <div class="col-md-3 col-sm-6-xs-12 whyteTestimonies m-5 p-3"  >
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, voluptas quos? Reiciendis quam, praesentium, labore adipisci eligendi, pariatur officia delectus beatae harum a cupiditate voluptas commodi aliquid voluptate omnis vitae!
 
-     
+                </p>
+                <span style="color:red">klaus</span> <br/> <span>Lagos</span>
+                
+            </div>
 
-    <!-- <div class="col-xs-12 col-sm-12 col-md-6">
-        <br>
-        <div class="card">
-            <div class="card-body">
-                <img src="#" alt="No image yet" class="card-img-top">
-                <h3 class="card-title">{{$subject->subject}}</h3>
-                <h6 class="card-title">{{$subject->description}}</h6>
-                <?php
-                                $counter = 0;
-                            ?>
-                {{-- @if ($subject->topics) --}}
-                @foreach ($subject->topics as $topic)
-                <?php $counter++?>
-                @if ($counter <= 4) -->
+            <div class="col-md-3 col-sm-6-xs-12 whyteTestimonies m-5 p-3">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, voluptas quos? Reiciendis quam, praesentium,
+                    labore adipisci eligendi, pariatur officia delectus beatae harum a cupiditate voluptas commodi aliquid voluptate
+                    omnis vitae!
+            
+                </p>
+                <span style="color:red">klaus</span> <br /> <span>Lagos</span>
+            
+            </div>
+
+            <div class="col-md-3 col-sm-6-xs-12 whyteTestimonies m-5 p-3">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, voluptas quos? Reiciendis quam, praesentium,
+                    labore adipisci eligendi, pariatur officia delectus beatae harum a cupiditate voluptas commodi aliquid voluptate
+                    omnis vitae!
+            
+                </p>
+                <span style="color:red">klaus</span> <br /> <span>Lagos</span>
+            
+            </div>
+        </div>
+    </div>
+
+
+    <!-- the news section of the site -->
+
+    <div class="news-section m-5 p-3" id="newsWhyte " style="background: #fff">
+
+        <h3 class="text-center text-danger mb-4"> News Blog</h3>
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <h3>How to purhase a good acr</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, debitis perspiciatis, non eum at molestias quis eius laboriosam iusto sint consequatur? Hic impedit voluptatem adipisci unde excepturi consequatur, reprehenderit neque?
+
+                </p>
+                <a href="#" class="btn btn-primary"> Read More</a>
+            </div>
+
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <h3>How to purhase a good acr</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, debitis perspiciatis, non eum at molestias quis
+                    eius laboriosam iusto sint consequatur? Hic impedit voluptatem adipisci unde excepturi consequatur,
+                    reprehenderit neque?
+            
+                </p>
+                <a href="#" class="btn btn-primary"> Read More</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="footerItems bg-primary text-center" style="height: 60px">
+            @copy 2019. all rights reserved
+        </div>
+    </footer>
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/popper.js"></script>

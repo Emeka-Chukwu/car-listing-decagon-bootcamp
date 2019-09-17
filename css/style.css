@@ -13,11 +13,9 @@ img{
   max-width: 95%;
 }
 body{
-    background: gray;
+    background: whitesmoke;
 }
-/* background: url("storage/carousel-image/image3.jpg") no-repeat;
-        height: 130%;
-        /* min-width: 100%; */
-        /* min-height: 100%; */
-        /* background-size: 100% 100%; */
-        /* background-position:bottom; */ 
+
+.whyteTestimonies{
+  background: #fff;
+}
