@@ -1,0 +1,19 @@
+/* 
+
+.backgroundImage{
+    /* background: url("cars-for-sale.jpg") no-repeat; */
+  /* height: 150vh; */
+  /* background-size: 100% 100%;  */
+   /* background-image: url('cars-for-sale.jpg') */
+
+} */
+
+body{
+    background: #1342ea
+}
+/* background: url("storage/carousel-image/image3.jpg") no-repeat;
+        height: 130%;
+        /* min-width: 100%; */
+        /* min-height: 100%; */
+        /* background-size: 100% 100%; */
+        /* background-position:bottom;  */

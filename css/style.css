@@ -1,0 +1,23 @@
+
+
+.backgroundImage{
+    background: url("../vintage-image.jpg") no-repeat;
+  height: 80vh;
+  background-size: 100% 100%;
+  background-position: center center
+  /* background-image: url('cars-for-sale.jpg') */
+
+}
+
+img{
+  max-width: 95%;
+}
+body{
+    background: gray;
+}
+/* background: url("storage/carousel-image/image3.jpg") no-repeat;
+        height: 130%;
+        /* min-width: 100%; */
+        /* min-height: 100%; */
+        /* background-size: 100% 100%; */
+        /* background-position:bottom; */ 
