@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>login page</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="index.html">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="login.html">Sign in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 m-auto">
+            <div class="card">
+                <div class="card-header">Register</div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <div class="col-md-8 m-auto">
+                                <label for="name" :id="name">Name</label>
+                                <input type="text" name="" id="Name" class="form-control" placeholder="camery...">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-8 m-auto">
+                                <label for="email" :id="emai" required>Email</label>
+                                <input type="email" name="" id="email" class="form-control" placeholder="email">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-8 m-auto">
+                                <label for="number" id="tel" >Tel</label>
+                                <input type="number" name="tel" id="tel" class="form-control" placeholder="phone number">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-8 m-auto">
+                                <label for="password" id="password">Password</label>
+                                <input type="password" name="password" id="password" class="form-control" placeholder="password">
+                            </div>
+                        </div>
+
+                        <div class="form-group m-auto mb-3">
+                            <div class="col-md-8 m-auto">
+                                <label for="confirm" id="confirm">Confirm Password</label>
+                                <input type="password" name="confirm" id="confirm" class="form-control" placeholder="confirem password">
+                            </div>
+                        </div>
+
+                        <div class="form-group m-auto">
+                            <br>
+                            <div class="col-md-8 m-auto ">
+                                
+                                <input type="submit" value="Register" class="btn btn-primary">
+                            <a href="register.html" class="float-right" style="color: bluenara">Already have an account</a>
+
+                            </div>
+                        </div>
+
+                    </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <footer>
+        <div class="footerItems bg-primary text-center mt-5" style="height: 60px">
+            &copy 2019. all rights reserved
+        </div>
+    </footer>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/popper.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

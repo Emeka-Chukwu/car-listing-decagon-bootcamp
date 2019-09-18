@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <header>
@@ -29,50 +31,33 @@
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="login.html">Sign in</a>
+                        <a class="nav-link " href="login.html">Sign in</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="register.html">Register</a>
+                        <a class="nav-link active" href="register.html">Register</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col-md-8 m-auto">
-                    <form class="col-md-6">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" placeholder="Enter email">
-                    
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" placeholder="Password">
-                        </div>
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                            <a href="register.html" class="float-right" style="color: bluenara">don't have an account</a>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
+ 
+        <div class="container">
+            <div class="row dataDisplay" id="displayData">
+                <!-- the crud function would be displayed and carried out here -->
+                </div> 
             </div>
         </div>
 
-
-
-    <footer >
+    <footer>
         <div class="footerItems bg-primary text-center mt-5" style="height: 60px">
-            @copy 2019. all rights reserved
+            &copy 2019. all rights reserved
         </div>
     </footer>
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/popper.js/dist/popper.js"></script>
+    <script src="javascript/index.js"></script>
+    <!-- <script src="node_modules/popper.js/dist/popper.js"></script> -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>
