@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script>
-        if (localStorage.getItem('singleId') !== undefined) {
+        if (localStorage.getItem('userId') === null) {
+                 window.location = '/login.html' 
+            }
+        if (localStorage.getItem('singleId') !== null) {
 
             let singleId = localStorage.getItem('singleId');
             $.ajax({

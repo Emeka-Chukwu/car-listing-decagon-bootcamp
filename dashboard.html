@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        if(localStorage.getItem('userId') === null){
+            window.location = '/login.html' 
+        }
+
+        if(localStorage.getItem('adminId') !== null){
+            alert('welcome admin')
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="index.html">Car75
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="login.html">Sign in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                Dashboard
+            </div>
+            <div class="card-body">  
+                <div class="row" id="userDetails">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="footerItems bg-primary text-center mt-5" style="height: 60px">
+            @copy 2019. all rights reserved
+        </div>
+    </footer>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="javascript/users.js"></script>
+    <!-- <script src="node_modules/popper.js/dist/popper.js"></script> -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        let userId = localStorage.getItem('userId');
+        $.ajax({
+                url: "http://localhost:3000/cars?user_id="+userId,
+                method: "get"
+            })
+            .done((res) =>{
+                res.forEach(elem =>{
+                    $('#userDetails').append(
+                        `<div class="col-md-5 col-sm-10 col-xs-11 mt-5 mb-5">
+                            <div class="card-img"> <img src="images/${elem.carImage}" alt="${elem.carImage}"> </div>
+                        </div>
+
+                        <div class="col-md-7 col-sm-10 col-xs-11 mt-5 mb-5">
+                            <p class="c"><b>Name</b> ${elem.carName}</p>
+                            <p class="c"><b>Price</b>  ${elem.carPrice}</p>
+                            <p class="c"><b>Mileage</b>  ${elem.carMileage}</p>
+                            <p class="c"><b></b>  ${elem.car}</p>
+                           <span class="btn btn-primary float-left" onclick="(individualEdit(${elem.id}))">edit</span> 
+                     <span class="btn btn-danger float-right" onclick="(individualDelete(${elem.id}))">delete</span>  
+                               
+                        </div>
+                        <hr>
+                        <br>
+                        `
+                    )
+                })
+            })
+
+            function individualDelete(i){
+
+            }
+
+            function individualEdit(i){
+                 if (localStorage.getItem('singleId') !== null) {
+
+                    let singleId = localStorage.setItem('singleId', i);
+                    window.location = '/edit.html'
+                 }
+            }
+    </script>
+</body>
+
+</html>
