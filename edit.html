@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit page</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+        if (localStorage.getItem('singleId') !== undefined) {
+
+            let singleId = localStorage.getItem('singleId');
+            $.ajax({
+                url: 'http://localhost:3000/cars/' + singleId,
+                method: 'get'
+            })
+                .done((res) => {
+                    $('#displayData').append(
+                        `
+                        <div class="card">
+                    <div class="card-header"> Updating car list</div>
+                    <div class="card-body">
+
+
+                        <form action="" method="POST" id="update_list">
+
+                        <div class="form-group">
+                            <div class="col-md-8 m-auto">
+                                <label for="name" id="name">Name</label>
+                                <input type="text" name="" id="carName1" class="form-control" placeholder="camry..." value="${res.carName}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-8 m-auto">
+                                <label for="price" id="price" required>Price</label>
+                                <input type="number" name="" id="carPrice1" class="form-control" value="${res.carPrice}" placeholder="pricem" >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-8 m-auto">
+                                <label for="number" id="tel">Mileage</label>
+                                <input type="number" name="ileage" id="carMileage1" class="form-control" " value="${res.carMileage}"
+                                    placeholder="mileage">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-8 m-auto">
+                                <label for="year" id="Year">Year</label>
+                                <input type="text" name="year" id="carYear1" class="form-control" " value="${res.carYear}"
+                                    placeholder="9/04/19">
+                            </div>
+                        </div>
+
+                        <div class="form-group m-auto mb-3">
+                            <div class="col-md-8 m-auto">
+                                
+                                <input type="hidden" name="image" id="carImage1" class="form-control"  value="${res.image}"
+                                    >
+                            </div>
+                        </div>
+
+                        <div class="form-group m-auto">
+                            <br>
+                            <div class="col-md-8 m-auto ">
+
+                                <input type="submit" value="Update" class="btn btn-primary" id="submitData">
+                                
+
+                            </div>
+                        </div>
+                    </form>
+
+                    </div>
+                </div>
+                           
+                        `
+                    )
+                })
+        }
+
+      
+
+        function individualEdit(i) {
+
+        }
+
+        
+            
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="index.html">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="login.html">Sign in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container" id="displayData">
+        <div class="row dataDisplay" id="displa">
+
+        </div>
+    </div>
+    </div>
+
+    <footer>
+        <div class="footerItems bg-primary text-center mt-5" style="height: 60px">
+            &copy 2019. all rights reserved
+        </div>
+    </footer>
+
+
+    <!-- <script src="javascript/index.js"></script> -->
+    <!-- <script src="node_modules/popper.js/dist/popper.js"></script> -->
+   
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+    <script>
+        $('window').ready(() => {
+            $('#update_list').submit((e) => {
+                e.preventDefault();
+                let singleId = localStorage.getItem('singleId');
+                let carName = $('#carName1').val();
+                let carPrice = $('#carPrice1').val();
+                let carMileage = $('#carMileage1').val();
+                let carYear = $('#carYear1').val();
+                let carImage = $('#carImage1').val();
+
+                $.ajax({
+                    url: 'http://localhost:3000/cars/' + singleId,
+                    method: 'put',
+                    data: {
+                        carName,
+                        carPrice,
+                        carMileage,
+                        carYear,
+                        carImage
+
+                    }
+                }).done((res) => {
+                    console.log(res)
+                })
+                .catch((err) => console.log(err))
+            })
+        })
+
+    </script>
+</body>
+
+</html>
