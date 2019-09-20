@@ -7,18 +7,24 @@
     <title> Car75</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        let make = document.querySelector('input');
+        let name = document.querySelector('inputYear')
+
+    </script>
 </head>
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <a class="navbar-brand" href="index.html">Navbar</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary  " style="font-size: 1.3rem">
+            <a class="navbar-brand pl-5 text-uppercase font-weight-bold" href="index.html">car75</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav mr-auto">
+            <div class="collapse navbar-collapse justify-content-end " id="navbarText">
+                <ul class="navbar-nav pr-5 text-uppercase">
                     <li class="nav-item active">
                         <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
@@ -37,88 +43,88 @@
                 </ul>
             </div>
         </nav>
-    </header> 
+    </header>
     
     <div class="">
-        <div class="backgroundImage">
-
-            <!-- display the image here for users to see -->
-
-            <form action="" method="get" mt-5>
-                <div class="form-group col-md-5">
-                    <label for="inputPassword4">Make</label>
-                    <select id="inputState" class="form-control">
-                        <option selected>Choose...</option>
-                        <option>...</option>
-                    </select>
+        <div class="backgroundImage img-responsive">
+            <div id="overlay">
+                <div id="home-content">
+                    <div id="inner-content" class="text-center">
+                        <div id="home-heading">
+                            <h1>CARS75</h1>
+                        </div>
+                        <div id="home-text">
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Harum nemo <br>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Harum nemo <br>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Harum nemo</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group col-md-5">
-                    <label for="inputPassword4">model</label>
-                    <select id="inputState" class="form-control">
-                        <option selected>Choose...</option>
-                        <option>...</option>
-                    </select>
-                </div>
-            
-               
-                <div class="form-group col-md-5">
-                    <input type="submit" value="search" class="btn btn-primary">
-                </div>
-               
-                
-              
-               
-            </form>
+            </div>
+            <!-- Content -->
+          
+            </div>
         </div>
-    </div>
+        
 
 
 
-    <div class="container mt-5">
-        <h2 class="text-center text-primary mb-5"> Featured </h2>
+
+    <div class="container mt-5 mb-5">
+        <h2 class="text-center text-primary mb-3"> Featured Cars </h2>
         <div class="row" id="cardCarList">
             
             </div>       
         </div>
     </div>
 
-    <div class="mt-5 " id="whyteTestimony" >
+    <div class="mt-5 " class="whyteTestimonies" >
         <h2 class="text-center text-primary">
             Testimonies
         </h2>
-        <div class="row m-3">
+        <div class="container-fluid ">
+            <div class="row">
             
-            <div class="col-md-3 col-sm-6-xs-12 whyteTestimonies m-5 p-3"  >
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, voluptas quos? Reiciendis quam, praesentium, labore adipisci eligendi, pariatur officia delectus beatae harum a cupiditate voluptas commodi aliquid voluptate omnis vitae!
-
-                </p>
-                <span style="color:red">klaus</span> <br/> <span>Lagos</span>
-                
-            </div>
-
-            <div class="col-md-3 col-sm-6-xs-12 whyteTestimonies m-5 p-3">
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, voluptas quos? Reiciendis quam, praesentium,
-                    labore adipisci eligendi, pariatur officia delectus beatae harum a cupiditate voluptas commodi aliquid voluptate
-                    omnis vitae!
+                <div class="col-md-4 p-3 ">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, voluptas quos? Reiciendis quam,
+                        praesentium, labore adipisci eligendi, pariatur officia delectus beatae harum a cupiditate voluptas commodi
+                        aliquid voluptate omnis vitae!
             
-                </p>
-                <span style="color:red">klaus</span> <br /> <span>Lagos</span>
+                    </p>
+                    <span style="color:red">klaus</span> <br /> <span>Lagos</span>
             
-            </div>
-
-            <div class="col-md-3 col-sm-6-xs-12 whyteTestimonies m-5 p-3">
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, voluptas quos? Reiciendis quam, praesentium,
-                    labore adipisci eligendi, pariatur officia delectus beatae harum a cupiditate voluptas commodi aliquid voluptate
-                    omnis vitae!
+                </div>
             
-                </p>
-                <span style="color:red">klaus</span> <br /> <span>Lagos</span>
+                <div class="col-md-4 p-">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, voluptas quos? Reiciendis quam,
+                        praesentium,
+                        labore adipisci eligendi, pariatur officia delectus beatae harum a cupiditate voluptas commodi aliquid
+                        voluptate
+                        omnis vitae!
             
+                    </p>
+                    <span style="color:red">klaus</span> <br /> <span>Lagos</span>
+            
+                </div>
+            
+                <div class="col-md-4 p-3">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, voluptas quos? Reiciendis quam,
+                        praesentium,
+                        labore adipisci eligendi, pariatur officia delectus beatae harum a cupiditate voluptas commodi aliquid
+                        voluptate
+                        omnis vitae!
+            
+                    </p>
+                    <span style="color:red">klaus</span> <br /> <span>Lagos</span>
+            
+                </div>
             </div>
         </div>
+      
     </div>
 
 
@@ -154,7 +160,7 @@
 
     <footer>
         <div class="footerItems bg-primary text-center" style="height: 60px">
-            @copy 2019. all rights reserved
+            <h4 class="pt-3">&copy; 2019. all rights reserved</h4>
         </div>
     </footer>
 

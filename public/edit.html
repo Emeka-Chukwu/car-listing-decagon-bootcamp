@@ -63,7 +63,7 @@
                         <div class="form-group m-auto mb-3">
                             <div class="col-md-8 m-auto">
                                 
-                                <input type="hidden" name="image" id="carImage1" class="form-control"  value="${res.image}"
+                                <input type="hidden" name="image" id="carImage1" class="form-control"  value="${res.carImage}"
                                     >
                             </div>
                         </div>
@@ -148,7 +148,7 @@
    
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-
+<!-- the update section of the application page -->
     <script>
         $('window').ready(() => {
             $('#update_list').submit((e) => {
@@ -162,17 +162,18 @@
 
                 $.ajax({
                     url: 'http://localhost:3000/cars/' + singleId,
-                    method: 'put',
+                    method: 'patch',
                     data: {
                         carName,
                         carPrice,
                         carMileage,
                         carYear,
-                        carImage
+                        
 
                     }
                 }).done((res) => {
                     console.log(res)
+                    window.location = '/';
                 })
                 .catch((err) => console.log(err))
             })

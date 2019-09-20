@@ -1,5 +1,5 @@
 $('window').ready(()=>{
-    // user registration in building~
+    // user registration  ~
     $('#registerUser').submit((e)=>{
         e.preventDefault();
         let name = $('#name').val().trim();
@@ -38,6 +38,7 @@ $('window').ready(()=>{
             })
             .done((res)=>{
                 console.log(res)
+                window.location = '/'
             })
             .catch((err) =>{
                 console.log(err)
