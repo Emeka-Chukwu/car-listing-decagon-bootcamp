@@ -55,7 +55,7 @@ $('document').ready(()=>{
                          <p>${elem.carYear} yr</p>
                        
                 <div class="card-footer">          
-                <span class="btn btn-primary form-control" onclick="(individual(${index+1}))">view</span>  
+                <span class="btn btn-primary form-control" onclick="(individual(${parseInt(elem.id)}))">view</span>  
                 </div>        
                     </div>
                 </div>

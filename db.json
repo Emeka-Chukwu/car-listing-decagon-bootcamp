@@ -44,15 +44,6 @@
       "id": 5
     },
     {
-      "carName": "camry camry camry",
-      "carPrice": "400000",
-      "carMileage": "345",
-      "carYear": "17/4/2017",
-      "user_id": 2,
-      "carImage": "mercedes-benz.jpg",
-      "id": 6
-    },
-    {
       "carName": "ee",
       "carPrice": "222",
       "carMileage": "333",
@@ -105,12 +96,12 @@
       "id": 12
     },
     {
-      "carName": "isnotpossible",
-      "carPrice": "444444444444",
-      "carMileage": "44444444444444444",
-      "carYear": "2222222222222224444",
+      "carName": "jjjjjjjjjjj nnn",
+      "carPrice": "5555555555",
+      "carMileage": "5555555",
+      "carYear": "lkkjkl",
       "user_id": "2",
-      "carImage": "range-rover.jpg",
+      "carImage": "mercedes-c300.jpg",
       "id": 13
     }
   ],
@@ -146,6 +137,22 @@
       "telephone": "4444444",
       "user_level": "1",
       "id": 4
+    },
+    {
+      "name": "emeka",
+      "email": "emekaemeka@gmail.com",
+      "password": "emeka",
+      "telephone": "8165955353",
+      "user_level": "1",
+      "id": 5
+    },
+    {
+      "name": "jessica decagon",
+      "email": "jessica@gmail.com",
+      "password": "666666",
+      "telephone": "9898976",
+      "user_level": "1",
+      "id": 6
     }
   ]
 }

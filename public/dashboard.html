@@ -9,13 +9,19 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script>
-        if(localStorage.getItem('userId') === null){
-            window.location = '/login.html' 
-        }
+        
+            if (localStorage.getItem('userId') === null) {
+                window.location = '/login.html'
+            }
 
-        if(localStorage.getItem('adminId') !== null){
-            alert('welcome admin')
-        }
+            if (localStorage.getItem('adminId') !== null) {
+                alert('welcome admin')
+            }
+
+          
+       
+        
+        
     </script>
 </head>
 
@@ -43,8 +49,12 @@
                         <a class="nav-link " href="create.html">Create</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="register.html"></a>
+                        <a class="nav-link " href="userstable.html">users</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout.html"> logout</a>
+                    </li>
+                   
                 </ul>
             </div>
         </nav>
@@ -105,10 +115,21 @@
             })
 
             function individualDelete(i){
-
+                alert('deleted')
+                $.ajax({
+                    url: "http://localhost:3000/cars/" + i,
+                    method: 'delete'
+                })
+                    .done((res) => {
+                        console.log('deleted')
+                        window.location = '/'
+                    })
             }
 
             function individualEdit(i){
+                if(localStorage.getItem('singleId') == null){
+                    let singleId = localStorage.setItem('singleId',i);
+                }
                  if (localStorage.getItem('singleId') !== null) {
 
                     let singleId = localStorage.setItem('singleId', i);
